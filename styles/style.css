@@ -54,7 +54,7 @@ body {
   color: red;
 }
 .reproductor_options .labels p {
-  color: gray;
+  color: #8a8a8a;
 }
 .reproductor_options .reproductor_actions {
   display: flex;
@@ -62,27 +62,57 @@ body {
 }
 .reproductor_options .reproductor_actions .backward,
 .reproductor_options .reproductor_actions .forward {
-  width: 40px;
-  height: 40px;
   text-align: center;
-  padding: 0.6rem;
-  border-radius: 20px;
+  padding: 1.5rem;
+  border-radius: 40px;
   background-color: white;
   box-shadow: 0px -1px 13px 0px rgba(102, 104, 106, 0.6), -1px -1px 16px rgba(102, 104, 106, 0.5);
 }
+.reproductor_options .reproductor_actions .backward .BtonB,
+.reproductor_options .reproductor_actions .forward .BtonB {
+  font-size: 20px;
+  color: #8a8a8a;
+}
+.reproductor_options .reproductor_actions .backward .BtonF,
+.reproductor_options .reproductor_actions .forward .BtonF {
+  font-size: 20px;
+  color: #8a8a8a;
+}
 .reproductor_options .reproductor_actions .play {
-  width: 50px;
-  height: 50px;
   text-align: center;
   padding: 1rem;
-  border-radius: 27px;
+  border-radius: 35px;
   background-color: white;
   box-shadow: -1px 1px 25px 7px #fafcff, 1px 20px 20px 0px rgba(148, 158, 169, 0.5);
+}
+.reproductor_options .reproductor_actions .play .BtonP {
+  font-size: 35px;
+  color: red;
 }
 .reproductor_options .reproductor_menus {
   display: flex;
   justify-content: space-around;
   margin-bottom: 1rem;
+  border: none;
+}
+.reproductor_options .reproductor_menus button {
+  border: none;
+}
+.reproductor_options .reproductor_menus button .BtonH {
+  color: #8a8a8a;
+  font-size: 30px;
+}
+.reproductor_options .reproductor_menus button .BtonRam {
+  color: #8a8a8a;
+  font-size: 30px;
+}
+.reproductor_options .reproductor_menus button .BtonU {
+  color: #8a8a8a;
+  font-size: 30px;
+}
+.reproductor_options .reproductor_menus button .BtonE {
+  color: #8a8a8a;
+  font-size: 30px;
 }
 
 .icons_options {
@@ -131,7 +161,7 @@ body {
   .reproductor_actions {
     padding-top: 30px;
     margin-top: 80px;
-    margin-bottom: 250px;
+    margin-bottom: 210px;
   }
 }
 
