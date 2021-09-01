@@ -1,27 +1,32 @@
+
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-}
-
-$coloBotones: #8a8a8a;
-@font-face {
+  }
+  
+  
+  @font-face {
     font-family: Roboto;
     src: url("../assets/fonts/Roboto-Light.ttf");
-}
-
-body {
+  }
+  
+  body{
     background-color: #e4f2fb;
     padding: 10rem;
-}
-
-.container {
+  }
+  
+  .container {
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.reproductor {
+    
+  }
+  svg:hover{
+      cursor: pointer;
+  }
+  .reproductor {
     width: 310px;
     height: 550px;
     display: flex;
@@ -29,133 +34,121 @@ body {
     align-items: center;
     justify-content: center;
     border-radius: 10px;
-    box-shadow: 9px 9px 16px rgba(102, 104, 106, 0.6), -9px -9px 16px rgba(102, 104, 106, 0.5);
-}
-
-.options {
+    box-shadow: 9px 9px 16px rgba(102, 104, 106, 0.6),
+      -9px -9px 16px rgba(102, 104, 106, 0.5);
+  }
+  .options{
     width: 100%;
     background-image: url("../assets/fondo.jpeg");
     height: 50%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-}
-
-.reproductor_options {
+  }
+  .reproductor_options{
     width: 100%;
     height: 50%;
     background-color: white;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    .labels {
-        margin-top: 1.5rem;
-        h4 {
-            color: red;
-        }
-        p {
-            color: $coloBotones
-        }
+    .labels{
+      margin-top: 1.5rem;
+      h4{
+        color: red;
+      }
+      p{
+        color: gray
+      }
     }
-    .reproductor_actions {
-        display: flex;
-        justify-content: space-around;
-        .backward,
-        .forward {
-            text-align: center;
-            padding: 1.5rem;
-            border-radius: 40px;
-            background-color: white;
-            box-shadow: 0px -1px 13px 0px rgb(102 104 106 / 60%), -1px -1px 16px rgb(102 104 106 / 50%);
-            .BtonB {
-                font-size: 20px;
-                color: $coloBotones;
-            }
-            .BtonF {
-                font-size: 20px;
-                color: $coloBotones;
-            }
-        }
-        .play {
-            text-align: center;
-            padding: 1rem;
-            border-radius: 35px;
-            background-color: white;
-            box-shadow: -1px 1px 25px 7px rgb(250 252 255 / 100%), 1px 20px 20px 0px rgb(148 158 169 / 50%);
-            .BtonP {
-                font-size: 35px;
-                color: red;
-            }
-        }
+    .reproductor_actions{
+      display: flex;
+      justify-content: space-around;
+      .backward, .forward{
+          svg{
+              color: grey;
+          }
+      }
+      .play{
+          svg{
+              color:red;
+          }
+      }
+      // .backward, .forward{
+      //   width: 40px;
+      //   height: 40px;
+      //   text-align: center;
+      //   padding: 0.3rem;
+      //   border-radius: 20px;
+      //   background-color: white;
+      //   box-shadow: 0px -1px 13px 0px rgb(102 104 106 / 60%), -1px -1px 16px rgb(102 104 106 / 50%);
+      // }
+      // .play{
+      //   width: 50px;
+      //   height: 50px;
+      //   text-align: center;
+      //   padding: .4rem;
+      //   border-radius: 27px;
+      //   background-color: white;
+      //   box-shadow: -1px 1px 20px 6px rgb(250 252 255 / 60%), 1px 20px 20px 0px rgb(148 158 169 / 50%);
+      // }
+      
     }
-    .reproductor_menus {
-        display: flex;
-        justify-content: space-around;
-        margin-bottom: 1rem;
-        border: none;
-        button {
-            border: none;
-            .BtonH {
-                color: $coloBotones;
-                font-size: 30px;
-            }
-            .BtonRam {
-                color: $coloBotones;
-                font-size: 30px;
-            }
-            .BtonU {
-                color: $coloBotones;
-                font-size: 30px;
-            }
-            .BtonE {
-                color: $coloBotones;
-                font-size: 30px;
-            }
-        }
+    .reproductor_menus{
+      display: flex;
+      justify-content: space-around;
+      margin-bottom: 1rem;
+      svg{
+          color: grey;
+      }
     }
-}
-
-.icons_options {
+  }
+  .icons_options{
     width: 95%;
     display: flex;
     justify-content: space-between;
     margin: .5rem;
-    svg {
-        color: white;
+    svg{
+      color: white;
     }
-}
-
-.player__level {
-    width: 80%;
-    -webkit-appearance: none;
-    outline: none;
-    border: none;
-    padding: 0;
-    margin-top: 40px;
-    margin-left: 2.5rem;
-    border-radius: 5px;
-}
-
-@media(max-width: 375px) {
-    body {
-        padding-top: 0.2px;
-    }
-    .options {
-        width: 100vw;
-    }
-    .container {
-        width: 100%;
-    }
-    .reproductor {
-        border-radius: none;
-        box-shadow: none;
-    }
-    .reproductor_options {
-        width: 100vw;
-    }
-    .reproductor_actions {
-        padding-top: 30px;
-        margin-top: 80px;
-        margin-bottom: 210px;
-    }
-}
+  }
+  
+  
+  
+  // input range style
+  
+  .level{
+      width: 80%;
+      margin: 0.5rem auto;
+      
+      -webkit-appearance: none;
+      background: white;
+      height: 3px;
+      border-radius: 10px;
+      background-image:linear-gradient(to right, red calc(var(--value)*1%), white 0);
+  }
+  .level:focus{
+      outline: none;
+  }
+  // responsive
+  
+  
+  @media(max-width: 390px) {
+      body{
+          padding: 0;
+          background-color: white;
+      }
+      .container{
+          width: 100%;
+          height: 100vh;
+      }
+      .reproductor{
+          width: 100%;
+          height: 100%;
+      }
+      .options{
+          width: 100%;
+          height: 50%;
+      }
+  }
+  //

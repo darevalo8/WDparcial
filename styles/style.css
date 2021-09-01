@@ -19,6 +19,10 @@ body {
   justify-content: center;
 }
 
+svg:hover {
+  cursor: pointer;
+}
+
 .reproductor {
   width: 310px;
   height: 550px;
@@ -54,65 +58,25 @@ body {
   color: red;
 }
 .reproductor_options .labels p {
-  color: #8a8a8a;
+  color: gray;
 }
 .reproductor_options .reproductor_actions {
   display: flex;
   justify-content: space-around;
 }
-.reproductor_options .reproductor_actions .backward,
-.reproductor_options .reproductor_actions .forward {
-  text-align: center;
-  padding: 1.5rem;
-  border-radius: 40px;
-  background-color: white;
-  box-shadow: 0px -1px 13px 0px rgba(102, 104, 106, 0.6), -1px -1px 16px rgba(102, 104, 106, 0.5);
+.reproductor_options .reproductor_actions .backward svg, .reproductor_options .reproductor_actions .forward svg {
+  color: grey;
 }
-.reproductor_options .reproductor_actions .backward .BtonB,
-.reproductor_options .reproductor_actions .forward .BtonB {
-  font-size: 20px;
-  color: #8a8a8a;
-}
-.reproductor_options .reproductor_actions .backward .BtonF,
-.reproductor_options .reproductor_actions .forward .BtonF {
-  font-size: 20px;
-  color: #8a8a8a;
-}
-.reproductor_options .reproductor_actions .play {
-  text-align: center;
-  padding: 1rem;
-  border-radius: 35px;
-  background-color: white;
-  box-shadow: -1px 1px 25px 7px #fafcff, 1px 20px 20px 0px rgba(148, 158, 169, 0.5);
-}
-.reproductor_options .reproductor_actions .play .BtonP {
-  font-size: 35px;
+.reproductor_options .reproductor_actions .play svg {
   color: red;
 }
 .reproductor_options .reproductor_menus {
   display: flex;
   justify-content: space-around;
   margin-bottom: 1rem;
-  border: none;
 }
-.reproductor_options .reproductor_menus button {
-  border: none;
-}
-.reproductor_options .reproductor_menus button .BtonH {
-  color: #8a8a8a;
-  font-size: 30px;
-}
-.reproductor_options .reproductor_menus button .BtonRam {
-  color: #8a8a8a;
-  font-size: 30px;
-}
-.reproductor_options .reproductor_menus button .BtonU {
-  color: #8a8a8a;
-  font-size: 30px;
-}
-.reproductor_options .reproductor_menus button .BtonE {
-  color: #8a8a8a;
-  font-size: 30px;
+.reproductor_options .reproductor_menus svg {
+  color: grey;
 }
 
 .icons_options {
@@ -125,43 +89,39 @@ body {
   color: white;
 }
 
-.player__level {
+.level {
   width: 80%;
+  margin: 0.5rem auto;
   -webkit-appearance: none;
-  outline: none;
-  border: none;
-  padding: 0;
-  margin-top: 40px;
-  margin-left: 2.5rem;
-  border-radius: 5px;
+  background: white;
+  height: 3px;
+  border-radius: 10px;
+  background-image: linear-gradient(to right, red calc(var(--value)*1%), white 0);
 }
 
-@media (max-width: 375px) {
-  body {
-    padding-top: 0.2px;
-  }
+.level:focus {
+  outline: none;
+}
 
-  .options {
-    width: 100vw;
+@media (max-width: 390px) {
+  body {
+    padding: 0;
+    background-color: white;
   }
 
   .container {
     width: 100%;
+    height: 100vh;
   }
 
   .reproductor {
-    border-radius: none;
-    box-shadow: none;
+    width: 100%;
+    height: 100%;
   }
 
-  .reproductor_options {
-    width: 100vw;
-  }
-
-  .reproductor_actions {
-    padding-top: 30px;
-    margin-top: 80px;
-    margin-bottom: 210px;
+  .options {
+    width: 100%;
+    height: 50%;
   }
 }
 
