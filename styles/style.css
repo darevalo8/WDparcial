@@ -68,6 +68,9 @@ svg:hover {
 .reproductor_options .reproductor_actions .play svg {
   color: red;
 }
+.reproductor_options .reproductor_actions .pause {
+  display: none;
+}
 .reproductor_options .reproductor_actions .backward, .reproductor_options .reproductor_actions .forward {
   width: 40px;
   height: 40px;
